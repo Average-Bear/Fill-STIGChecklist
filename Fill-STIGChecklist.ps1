@@ -389,8 +389,8 @@ foreach($File in $Files) {
     $FileName = $File.Split("\")
     $FilePath = "$SaveDirectory\Updated-$($Filename[$($Filename.Count)-1])"
 
-    #Export new XML data to a separate file; formats for STIG Viewer XML needs; use -AddHostData if you want to set the Hostname, IP, MAC, FQDN settings
-    Export-StigCKL -ExportPath $FilePath -AddHostData
+    #Export new XML data to a separate file; formats for STIG Viewer XML needs
+    Export-StigCKL -ExportPath $FilePath
 
     Write-Host -ForegroundColor Green "Updated $File - Saved to $FilePath"
 }
